@@ -16,3 +16,7 @@ img {
   display: block;
   max-width: 100%;
 }
+.button_task1{
+  width: 60px;
+  height: 40px;
+}
