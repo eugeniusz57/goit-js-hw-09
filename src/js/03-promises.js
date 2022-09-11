@@ -2,13 +2,10 @@ import {refs} from './03-refs';
 
 import Notiflix from 'notiflix';
 
-const position = refs.inputDelay.value;
-console.log(position);
-
 refs.form.addEventListener('input',  onInputObject,);
 refs.form.addEventListener('submit', onSubmit);
 
-const Date ={};
+const Date = {};
 
 function onInputObject(e){
 Date[e.target.name] = e.target.value;
