@@ -38,9 +38,9 @@ function onStart(e){
     delta = timerValue.getTime() - Date.now();
     console.log(delta);
     if(delta < 0){
-      Notiflix.Notify.info('Timer off');
       clearInterval(intervalId);
       refs.btnStart.setAttribute('disabled', true);
+      Notiflix.Notify.info('Timer off');
       return;
       }
     const timeComponent = convertMs(delta);
