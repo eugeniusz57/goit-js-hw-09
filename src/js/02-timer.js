@@ -22,7 +22,7 @@ const options = {
     if(delta > 0){
       Notiflix.Notify.failure('Please choose a date in the future');
       return;
-    }
+    } 
     refs.btnStart.removeAttribute("disabled");
     timerValue = dateCalendar;
   },
@@ -33,9 +33,19 @@ flatpickr(refs.input, options);
 refs.btnStart.addEventListener('click', onStart);
 
 function onStart(e){
-  setInterval(() => {
-    const delta = timerValue.getTime() - Date.now();
+  let delta = null;
+  const intervalId =  setInterval(() => {
+    delta = timerValue.getTime() - Date.now();
+    console.log(delta);
+    if(delta < 0){
+      Notiflix.Notify.info('Timer off');
+      clearInterval(intervalId);
+      refs.btnStart.setAttribute('disabled', true);
+      return;
+      }
     const timeComponent = convertMs(delta);
     makeTimer(timeComponent);
   }, 1000);
+
+  
 };
