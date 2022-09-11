@@ -20,3 +20,64 @@ img {
   width: 60px;
   height: 40px;
 }
+
+.label{
+  font-size: 16px;
+  font-style: oblique;
+  text-transform: uppercase;
+}
+
+.value{
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+.field{
+  margin: 5px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+#datetime-picker{
+  width: 310px;
+  height: 30px;
+  font-size: 26px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.btn-timer{
+  min-width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.contain{
+  display: flex;
+  align-items: center;
+}
+
+.timer{
+  margin-left: 30px;
+}
+
+.form{
+  display: flex;
+align-items: flex-end;
+}
+
+.form label{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.form input{
+  min-height: 25px;
+  border-radius: 4px;
+}
